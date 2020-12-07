@@ -29,7 +29,6 @@ class Rule:
 
     @cached_property
     def contained_bags(self) -> int:
-        print(self.child_rules)
         return sum(
             [factor + factor * rule.contained_bags for factor, rule in self.child_rules]
         )
