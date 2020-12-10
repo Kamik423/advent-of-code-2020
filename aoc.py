@@ -17,7 +17,7 @@ def cache_file_for_day(day: int) -> Path:
 def ensure_downloaded(day: int) -> None:
     cache_file = cache_file_for_day(day)
     if not cache_file.exists():
-        cookies = {"session": COOKIE_PATH.read_text()}
+        cookies = {"session": COOKIE_PATH.read_text().strip()}
         CACHE_DIRECTORY.mkdir(exist_ok=True)
         cache_file.write_bytes(requests.get(URL.format(day), cookies=cookies).content)
 
