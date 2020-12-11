@@ -4,7 +4,7 @@ import aoc
 
 
 def main() -> None:
-    board = [line for line in aoc.getstr(3).split("\n") if line]
+    board = [line for line in aoc.get_lines(3) if line]
 
     def is_tree(x: int, y: int) -> bool:
         return board[y][x % len(board[0])] == "#"

@@ -7,7 +7,7 @@ import aoc
 
 
 def main() -> None:
-    groups = aoc.getstr(6).strip().split("\n\n")
+    groups = aoc.get_str(6).strip().split("\n\n")
 
     accumulator = 0
     for group in groups:

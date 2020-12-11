@@ -27,13 +27,13 @@ def get(day: int) -> bytes:
     return cache_file_for_day(day).read_bytes()
 
 
-def getstr(day: int) -> str:
+def get_str(day: int) -> str:
     ensure_downloaded(day)
     return cache_file_for_day(day).read_text()
 
 
 def get_lines(day: int) -> List[str]:
-    return getstr(day).strip().split("\n")
+    return get_str(day).strip().split("\n")
 
 
 def get_integers(day: int) -> List[int]:

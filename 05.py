@@ -5,7 +5,7 @@ import aoc
 
 
 def main() -> None:
-    seats = aoc.getstr(5).strip().split()
+    seats = aoc.get_str(5).strip().split()
     seat_ids: List[int] = []
     for seat in seats:
         row = int(seat[:7].replace("F", "0").replace("B", "1"), 2)

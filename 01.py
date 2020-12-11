@@ -4,7 +4,7 @@ import aoc
 
 
 def main() -> None:
-    numbers = [int(line) for line in aoc.get(1).split(b"\n") if line]
+    numbers = aoc.get_integers(1)
     for lower_index, lower in enumerate(numbers):
         for upper in numbers[lower_index:]:
             if lower + upper == 2020:

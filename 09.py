@@ -8,7 +8,7 @@ from more_itertools import pairwise
 
 
 def main() -> None:
-    numbers = [int(line) for line in aoc.getstr(9).strip().split("\n")]
+    numbers = aoc.get_integers(9)
 
     stack: List[int] = []
     for index, (appending_number, number) in enumerate(pairwise(numbers)):

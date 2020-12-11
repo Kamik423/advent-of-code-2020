@@ -51,7 +51,7 @@ class Rule:
 
 
 def main() -> None:
-    for line in aoc.getstr(7).strip().split("\n"):
+    for line in aoc.get_lines(7):
         Rule(line)
     print(len([rule for rule in Rule.all_rules.values() if rule.contains_shiny_gold]))
     print(Rule.all_rules["shiny gold"].contained_bags)

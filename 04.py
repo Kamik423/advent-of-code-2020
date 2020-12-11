@@ -64,7 +64,7 @@ def validate_cid(data: Dict[str, str]) -> bool:
 
 
 def main() -> None:
-    passports = aoc.getstr(4).rstrip().split("\n\n")
+    passports = aoc.get_str(4).rstrip().split("\n\n")
     fields = ["byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid", "cid"]
     valid_passport_count = 0
     for passport in passports:

@@ -74,7 +74,7 @@ class CPU:
 
 
 def main() -> None:
-    cpu = CPU(aoc.getstr(8).strip().split("\n"))
+    cpu = CPU(aoc.get_lines(8))
     cpu.run()
     print(f"Found with at accumulator at {cpu.accumulator}.")
     for index in range(len(cpu.instructions)):

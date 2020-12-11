@@ -46,7 +46,8 @@ class Rule:
     def __init__(self, line: str, graph: Graph):
         self.graph = Graph
         match = regex.fullmatch(
-            r"^([a-z ]+?) bags contain (?:(no|\d+) ([a-z ]+?) bags?(?:\.$|, ))+", line,
+            r"^([a-z ]+?) bags contain (?:(no|\d+) ([a-z ]+?) bags?(?:\.$|, ))+",
+            line,
         )
         self.color = match[1]
         self.children_specs = {}
@@ -56,7 +57,7 @@ class Rule:
 
 
 def main() -> None:
-    graph = Graph(aoc.getstr(7).strip())
+    graph = Graph(aoc.get_str(7).strip())
     print(len([rule for rule in graph.rules.values() if rule.contains_shiny_gold]))
     print(graph.rules["shiny gold"].contained_bags)
 

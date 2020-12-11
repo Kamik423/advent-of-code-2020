@@ -5,7 +5,7 @@ import aoc
 
 def main() -> None:
     count = 0
-    for line in aoc.getstr(2).split("\n"):
+    for line in aoc.get_lines(2):
         if line:
             password_format, password = line.split(": ")
             amounts, character = password_format.split(" ")
@@ -17,7 +17,7 @@ def main() -> None:
     print(count)
 
     count = 0
-    for line in aoc.getstr(2).split("\n"):
+    for line in aoc.get_lines(2):
         if line:
             password_format, password = line.split(": ")
             positions, character = password_format.split(" ")
